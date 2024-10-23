@@ -1,0 +1,55 @@
+:root {
+    --tausta-varv_valge: #ffffff;
+    --tausta-varv_1: #272744;
+    --tausta-varv_2: #6c174f;
+
+    --teksti-varv_1: #ececec;
+    --teksti-varv_2: #c13838;
+    --teksti-varv_3: #56b158;
+
+    --aare_raadius_1: 5px;
+    --aare_raadius_2: 10px;
+
+    --aare_stiil_1: 3px solid #d47e8d;
+
+    --font_suurus_1: 1.5rem;
+    --font_suurus_2: 2rem;
+    --font_suurus_3: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--tausta-varv_1);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#riigiNimi {
+    position: absolute;
+    background-color: var(--tausta-varv_valge);
+    width: fit-content;
+    opacity: 0;
+    border-radius: var(--aare_raadius_1);
+    border: var(--aare_stiil_1);
+    padding: 5px;
+    font-size: var(--font_suurus_1);
+}
+
+#kellaAeg {
+    background-color: var(--tausta-varv_valge);
+    width: fit-content;
+    border-radius: var(--aare_raadius_1);
+    opacity: 0;
+    border: var(--aare_stiil_1);
+    padding: 5px;
+    font-size: var(--font_suurus_1);
+}
+
+svg path {
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}

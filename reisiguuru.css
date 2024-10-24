@@ -53,6 +53,7 @@ body {
 svg path {
     cursor: pointer;
     transition: fill 0.3s ease;
+    background-color: #56b158;
 }
 
 svg path:hover {

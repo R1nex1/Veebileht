@@ -1,0 +1,23 @@
+{
+    "EE": {
+        "Nimi": "Eesti",
+        "Pealinn": "Tallinn",
+        "Rahvaarv": "1331000",
+        "Valuuta": "Euro",
+        "Keel": "Eesti"
+    },
+    "LT": {
+        "Nimi": "Leedu",
+        "Pealinn": "Vilnius",
+        "Rahvaarv": "2722000",
+        "Valuuta": "Euro",
+        "Keel": "Leedu"
+    },
+    "LV": {
+        "Nimi": "Läti",
+        "Pealinn": "Riia",
+        "Rahvaarv": "1921000",
+        "Valuuta": "Euro",
+        "Keel": "Läti"
+    }
+}

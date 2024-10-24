@@ -1,7 +1,7 @@
 :root {
     --tausta-varv_valge: #ffffff;
     --tausta-varv_1: #272744;
-    --tausta-varv_2: #6c174f;
+    --tausta-varv_2: #c95ba4;
 
     --teksti-varv_1: #ececec;
     --teksti-varv_2: #c13838;
@@ -27,15 +27,9 @@ body {
     overflow: hidden;
 }
 
-#kaart {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    scale: 2.5;
-}
-
 #riigiNimi {
+    left: 20%;
+    top: 20%;
     position: absolute;
     background-color: var(--tausta-varv_valge);
     width: fit-content;
@@ -46,7 +40,7 @@ body {
     font-size: var(--font_suurus_1);
 }
 
-#kellaAeg {
+#Infoleht {
     background-color: var(--tausta-varv_valge);
     width: fit-content;
     border-radius: var(--aare_raadius_1);
@@ -54,12 +48,6 @@ body {
     border: var(--aare_stiil_1);
     padding: 5px;
     font-size: var(--font_suurus_1);
-}
-
-svg {
-    width: 100%;
-    height: 100%;
-    display: block;
 }
 
 svg path {
@@ -69,4 +57,8 @@ svg path {
 
 svg path:hover {
     fill: var(--tausta-varv_2);
+}
+
+svg {
+    scale: 2.2;
 }

@@ -17,15 +17,67 @@
     --font_suurus_3: 3rem;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--tausta-varv_1);
     overflow: hidden;
 }
+
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--tausta-varv_1);
+    z-index: 1000;
+    padding: 10px 0;
+    transform: translateY(-100%); 
+    transition: transform 0.3s ease;
+}
+
+#nav.show {
+    transform: translateY(0);
+}
+
+#nav nav {
+    display: flex;
+    justify-content: center; 
+    gap: 100px; 
+}
+
+#nav a {
+    position: relative;
+    color: var(--teksti-varv_1);
+    text-decoration: none;
+    font-size: var(--font_suurus_1);
+    transition: color 0.3s ease;
+}
+
+#nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: var(--tausta-varv_2);
+    border-radius: var(--aare_raadius_1);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#nav a:hover {
+    color: var(--tausta-varv_2);
+}
+
+#nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 
 #riigiNimi {
     left: 20%;
@@ -40,7 +92,10 @@ body {
     font-size: var(--font_suurus_1);
 }
 
-#Infoleht {
+#infoleht {
+    top: 30%;
+    left: 20%;
+    position: absolute;
     background-color: var(--tausta-varv_valge);
     width: fit-content;
     border-radius: var(--aare_raadius_1);

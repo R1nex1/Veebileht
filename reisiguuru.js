@@ -11,30 +11,31 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading JSON:', error));
 
-    svgPaths.forEach(path => {
-        path.addEventListener('mouseover', (event) => {
-            const countryId = event.target.id;
-            const countryName = event.target.getAttribute('name');
-            countryNameDisplay.textContent = countryName;
-            countryNameDisplay.style.opacity = 1;
-
-            if (countryData[countryId]) {
-                const info = countryData[countryId];
-                infoLeht.querySelector('#Pealinn').textContent = `Pealinn: ${info.Pealinn}`;
-                infoLeht.querySelector('#Rahvaarv').textContent = `Rahvaarv: ${info.Rahvaarv}`;
-                infoLeht.querySelector('#Valuuta').textContent = `Valuuta: ${info.Valuuta}`;
-                infoLeht.querySelector('#Keel').textContent = `Keel: ${info.Keel}`;
-                infoLeht.style.opacity = 1;
-            }
-        });
-
-        path.addEventListener('mouseout', () => {
-            countryNameDisplay.textContent = 'Nimi';
-            countryNameDisplay.style.opacity = 0;
-            infoLeht.style.opacity = 0;
+        svgPaths.forEach(path => {
+            path.addEventListener('mouseover', (event) => {
+                const countryId = event.target.id;
+    
+                if (countryData[countryId]) {
+                    const info = countryData[countryId];
+                    countryNameDisplay.textContent = info.Riiginimi; 
+                    countryNameDisplay.style.opacity = 1;
+    
+                    
+                    infoLeht.querySelector('#Pealinn').textContent = `Pealinn: ${info.Pealinn}`;
+                    infoLeht.querySelector('#Rahvaarv').textContent = `Rahvaarv: ${info.Rahvaarv}`;
+                    infoLeht.querySelector('#Valuuta').textContent = `Valuuta: ${info.Valuuta}`;
+                    infoLeht.querySelector('#Keel').textContent = `Keel: ${info.Keel}`;
+                    infoLeht.style.opacity = 1;
+                }
+            });
+    
+            path.addEventListener('mouseout', () => {
+                countryNameDisplay.textContent = 'Nimi';
+                countryNameDisplay.style.opacity = 0;
+                infoLeht.style.opacity = 0;
+            });
         });
     });
-});
 
 document.addEventListener('mousemove', function(event) {
     const nav = document.getElementById('nav');

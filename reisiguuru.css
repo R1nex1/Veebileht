@@ -29,10 +29,9 @@ body {
 }
 
 #nav {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
-    background-color: var(--tausta-varv_1);
     z-index: 1000;
     padding: 10px 0;
     transform: translateY(-100%); 
@@ -89,7 +88,7 @@ body {
     border-radius: var(--aare_raadius_1);
     border: var(--aare_stiil_1);
     padding: 5px;
-    font-size: var(--font_suurus_1);
+    font-size: var(--font_suurus_2);
 }
 
 #infoleht {
@@ -108,7 +107,6 @@ body {
 svg path {
     cursor: pointer;
     transition: fill 0.3s ease;
-    background-color: #56b158;
 }
 
 svg path:hover {
@@ -116,5 +114,6 @@ svg path:hover {
 }
 
 svg {
-    scale: 2.2;
+    margin-right: 120px;
+    scale: 2.5;
 }

@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const svgPaths = document.querySelectorAll('svg path');
     const countryNameDisplay = document.getElementById('riigiNimi');
     const infoLeht = document.getElementById('infoleht');
+    const menuToggleContainer = document.getElementById('menu-toggle-container');
+    const nav = document.getElementById('nav');
     let countryData = {};
 
     fetch('info.json')
@@ -10,15 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error loading JSON:', error));
 
     svgPaths.forEach(path => {
-        path.addEventListener('mouseover', handleMouseOver);
+        path.addEventListener('mouseover', () => handleMouseOver(path.id));
         path.addEventListener('mouseout', handleMouseOut);
-        path.addEventListener('click', handleClick);
+        path.addEventListener('click', () => handleClick(path.id));
     });
 
-    function handleMouseOver(event) {
-        const countryId = event.target.id;
-        if (countryData[countryId]) {
-            const info = countryData[countryId];
+    function handleMouseOver(countryId) {
+        const info = countryData[countryId];
+        if (info) {
             countryNameDisplay.textContent = info.Riiginimi;
             countryNameDisplay.style.opacity = 1;
 
@@ -42,15 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
         infoLeht.style.opacity = 0;
     }
 
-    function handleClick(event) {
-        const countryId = event.target.id;
-        if (countryData[countryId]) {
-            window.location.href = countryData[countryId].alaleht;
+    function handleClick(countryId) {
+        const info = countryData[countryId];
+        if (info) {
+            window.location.href = info.alaleht;
         }
     }
-});
 
-document.addEventListener('mousemove', function(event) {
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('show', event.clientY < 50);
+    document.addEventListener('mousemove', (event) => {
+        menuToggleContainer.style.opacity = event.clientY < 50 ? 0 : 1;
+        nav.classList.toggle('show', event.clientY < 50);
+    });
 });

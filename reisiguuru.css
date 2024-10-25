@@ -5,7 +5,7 @@
 
     --teksti-varv_1: #ececec;
     --teksti-varv_2: #c13838;
-    --teksti-varv_3: #56b158;
+    --teksti-varv_3: rgba(255, 255, 255, 0.5);
 
     --aare_raadius_1: 5px;
     --aare_raadius_2: 10px;
@@ -26,6 +26,31 @@
 body {
     background-color: var(--tausta-varv_1);
     overflow: hidden;
+}
+
+#menu-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+#menu-toggle {
+    transform: translateX(-20%) translateY(-110%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    z-index: 1001; 
+}
+
+#menu-toggle .bar {
+    height: 2px;
+    background-color: var(--teksti-varv_3);
+    transition: all 0.3s ease;
 }
 
 #nav {
@@ -56,9 +81,6 @@ body {
     transition: color 0.3s ease;
 }
 
-#LV a::after {
-    content: 'LV';
-}
 
 #nav a::after {
     content: "";
@@ -131,6 +153,6 @@ svg path:hover {
 }
 
 svg {
-    margin-right: 120px;
+    margin-right: 250px;
     scale: 2.5;
 }

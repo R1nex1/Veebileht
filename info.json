@@ -2,22 +2,29 @@
     "EE": {
         "Riiginimi" : "Eesti",
         "Pealinn": "Tallinn",
-        "Rahvaarv": "1331000",
+        "Rahvaarv": "1 374 687",
         "Valuuta": "Euro",
-        "Keel": "Eesti"
-    },
-    "LT": {
-        "Riiginimi" : "Leedu",
-        "Pealinn": "Vilnius",
-        "Rahvaarv": "2722000",
-        "Valuuta": "Euro",
-        "Keel": "Leedu"
+        "Keel": "Eesti",
+        "alaleht": "eesti.html",
+        "video": "videod/eesti.mp4"
     },
     "LV": {
         "Riiginimi" : "Läti",
         "Pealinn": "Riia",
-        "Rahvaarv": "1921000",
+        "Rahvaarv": "1 871 882",
         "Valuuta": "Euro",
-        "Keel": "Läti"
+        "Keel": "Läti",
+        "alaleht": "lati.html",
+        "video": "videod/lati.mp4"
+    },
+    "LT": {
+        "Riiginimi" : "Leedu",
+        "Pealinn": "Vilnius",
+        "Rahvaarv": "2 860 002",
+        "Valuuta": "Euro",
+        "Keel": "Leedu",
+        "alaleht": "leedu.html",
+        "video": "videod/leedu.mp4"
     }
+    
 }

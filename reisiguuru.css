@@ -153,6 +153,5 @@ svg path:hover {
 }
 
 svg {
-    margin-right: 250px;
-    scale: 2.5;
+    position: absolute;
 }

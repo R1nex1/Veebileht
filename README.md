@@ -24,7 +24,7 @@ Reisiguuru on interaktiivne veebileht, mis pakub kasutajatele teavet erinevate r
 
 1. **Kloonige Repositoorium**:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/R1nex1/Veebileht>
    ```
 
 2. **Avage Projekt**:

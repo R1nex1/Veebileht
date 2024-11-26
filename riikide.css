@@ -18,24 +18,61 @@
     --font_suurus_3: 3rem;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
 }
+
 h1 {
-    text-align: center;
-    color: #2c3e50;
+    background-color: #0047AB;
+    color: white; 
+    padding: 20px 0; 
+    text-align: center; 
+    margin: 0; 
+    width: 100%; 
 }
+
+h1 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: #d47e8d;
+    text-decoration: underline; 
+}
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
     background-color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    overflow-y: auto;
 }
+
 .facts {
     font-size: 18px;
     line-height: 1.6;

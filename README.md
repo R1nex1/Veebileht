@@ -7,7 +7,7 @@ Reisiguuru on interaktiivne veebileht, mis pakub kasutajatele teavet erinevate r
 ## Projekti Struktuur
 
 - **HTML Failid**: 
-  - `reisiguuru.html`: Peamine leht, mis sisaldab kaarti ja riikide valikut.
+  - `index.html`: Peamine leht, mis sisaldab kaarti ja riikide valikut.
   - `eesti.html`, `lati.html`, `leedu.html`: Eraldi lehed iga riigi kohta, kus on esitatud detailsem teave ja külastussoovitused.
 
 - **CSS Failid**:
@@ -31,7 +31,7 @@ Reisiguuru on interaktiivne veebileht, mis pakub kasutajatele teavet erinevate r
    Avage projekt oma lemmik koodiredaktoris.
 
 3. **Käivitage Veebileht**:
-   Avage `reisiguuru.html` oma veebibrauseris, et näha kaarti ja alustada riikide avastamist.
+   Avage `index.html` oma veebibrauseris, et näha kaarti ja alustada riikide avastamist.
 
 ## Kasutamine
 

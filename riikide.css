@@ -2,6 +2,8 @@
     --tausta-varv_valge: #ffffff;
     --tausta-varv_1: #272744;
     --tausta-varv_2: #c95ba4;
+    --tausta-varv_3: #0047AB;
+    --tausta-varv_4: #d47e8d;
 
     --teksti-varv_1: #ececec;
     --teksti-varv_2: #c13838;
@@ -11,7 +13,7 @@
     --aare_raadius_1: 5px;
     --aare_raadius_2: 10px;
 
-    --aare_stiil_1: 3px solid #d47e8d;
+    --aare_stiil_1: 3px solid var(--tausta-varv_4);
 
     --font_suurus_1: 1.5rem;
     --font_suurus_2: 2rem;
@@ -41,8 +43,8 @@ body {
 }
 
 h1 {
-    background-color: #0047AB;
-    color: white; 
+    background-color: var(--tausta-varv_3);
+    color: var(--teksti-varv_1); 
     padding: 20px 0; 
     text-align: center; 
     margin: 0; 
@@ -50,12 +52,12 @@ h1 {
 }
 
 h1 a {
-    color: #ffffff;
+    color: var(--teksti-varv_1);
     text-decoration: none;
 }
 
 h1 a:hover {
-    color: #d47e8d;
+    color: var(--tausta-varv_4);
     text-decoration: underline; 
 }
 
@@ -66,9 +68,8 @@ h1 a:hover {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     flex-direction: column;
-    align-items: left;
     justify-content: left;
-    background-color: white;
+    background-color: var(--tausta-varv_valge);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -84,21 +85,21 @@ h1 a:hover {
 }
 .gallery {
     --size: 100px;
-  display: grid;
-  grid-template-columns: repeat(6, var(--size));
-  grid-auto-rows: var(--size);
-  gap: 5px;
-  place-items: start center;
-  margin-bottom: var(--size);
+    display: grid;
+    grid-template-columns: repeat(6, var(--size));
+    grid-auto-rows: var(--size);
+    gap: 5px;
+    place-items: start center;
+    margin-bottom: var(--size);
 }
 
 .gallery img {
     width: calc(var(--size) * 2);
-  height: calc(var(--size) * 2);
-  object-fit: cover;
-  grid-column: auto / span 2;
-  border-radius: 5px;
-  clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z"); 
+    height: calc(var(--size) * 2);
+    object-fit: cover;
+    grid-column: auto / span 2;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: clip-path 0.25s, filter 0.75s;
 }
 
 .gallery img:nth-child(5n - 1) { 
@@ -109,14 +110,11 @@ h1 a:hover {
     filter: brightness(0.5) contrast(0.5);
 }
 
-.gallery img {
-    transition: clip-path 0.25s, filter 0.75s;
-}
-  
 .gallery img:hover {
-    clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     transition: clip-path 0.25s, filter 0.25s;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .gallery a:focus {
